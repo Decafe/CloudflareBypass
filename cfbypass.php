@@ -159,7 +159,7 @@ function bypassyourdog($domain, $useragent, $proxy) {
 	}
 	$jschl_answer = strlen($domain) + $mathtotal;
 	$domain1 = $domain."/cdn-cgi/l/chk_jschl?jschl_vc=$jschl_vc&pass=$pass&jschl_answer=$jschl_answer";
-	sleep(4);
+	usleep(4100000);
 	$cURL1 = curl_init();
 	curl_setopt($cURL1, CURLOPT_URL, $domain1);
 	curl_setopt($cURL1, CURLOPT_RETURNTRANSFER, 1);
